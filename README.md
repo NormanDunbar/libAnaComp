@@ -15,6 +15,9 @@ The code is written in AVR Assembly Language, and the registers used are:
 * ADMUX, bits MUX2, MUX1 and MUX0.
 * ACSR, bits ACD, ACI, ACIE, ACBG, ACIS0 and ACIS1.
 
+## Documentation
+There is a documentation file in the `docs` folder on disc after you have unzipped the zip file. You can access it online [by clicking here](docs/LibAnaComp.md) or the PDF version [by clicking here](docs/LibAnaComp.pdf)
+
 ## Installation
 
 ### The Arduino IDE
