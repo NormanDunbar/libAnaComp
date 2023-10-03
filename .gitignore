@@ -2,7 +2,7 @@
 *.d
 
 # Ignore thelibrary, add as an asset.
-libanacomp.zip
+libAnaComp.zip
 
 
 # Compiled Object files
