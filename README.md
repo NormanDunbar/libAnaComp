@@ -63,4 +63,10 @@ Installing globally, even as described above, is somewhat frowned upon these day
 There are two supplied examples, well 4, two for the Arduino and 2 for PlatformIO/AVR C++. These are:
 
 * `LibAnaComp-example` which uses the Analog(ue) Comparator's interrupt to turn an LED on and off accordingly. There is another LED on the Arduino pin D13, aka PORTB5, which flashes every 2 seconds. This sketch demonstrates the ability of an interrupt routine to be called even while the Arduino is sitting in a `delay()` loop.
-* LibAnaComp-noInterrupt` which uses polling in the `loop()` to determine when the LED should be toggled. As there are no interrupts here, the built in LED on D13/PORTB5 is *not* blinking. If it was, you would have a tiny, tiny, fraction of a second to get the Arduino to recognise that you had triggered the Analog(ue) Comparator. 
+* LibAnaComp-noInterrupt` which uses polling in the `loop()` to determine when the LED should be toggled. As there are no interrupts here, the built in LED on D13/PORTB5 is *not* blinking. If it was, you would have a tiny, tiny, fraction of a second to get the Arduino to recognise that you had triggered the Analog(ue) Comparator.
+
+The examples all use the following breadboard setup:
+
+![Fritzing diagram of the examples breadboard setup.](LibAnaComp-Example.png "Fritzing diagram of the examples breadboard setup.").
+
+
