@@ -67,6 +67,6 @@ There are two supplied examples, well 4, two for the Arduino and 2 for PlatformI
 
 The examples all use the following breadboard setup:
 
-![Fritzing diagram of the examples breadboard setup.](LibAnaComp-Example.png "Fritzing diagram of the examples breadboard setup.").
+![Fritzing diagram of the examples breadboard setup.](docs/LibAnaComp-Example.png "Fritzing diagram of the examples breadboard setup.").
 
 
