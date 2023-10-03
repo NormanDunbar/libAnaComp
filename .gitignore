@@ -1,6 +1,10 @@
 # Prerequisites
 *.d
 
+# Ignore thelibrary, add as an asset.
+libanacomp.zip
+
+
 # Compiled Object files
 *.slo
 *.lo
