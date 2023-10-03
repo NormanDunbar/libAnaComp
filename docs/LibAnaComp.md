@@ -217,7 +217,7 @@ If you call this function in a sketch then you should call `acSetup()` and, opti
 
 Set up a breadboard as follows:
 
-![The Analog Comparator breadboard circuit](LibAnaComp-Example.png "Analog Comparator breadboard circuit")
+![The Analog Comparator breadboard circuit](../LibAnaComp-Example.png "Analog Comparator breadboard circuit")
 
 The AIN0/D6/PD6 pin is connected to the Arduino's 3.3V rail. This is used as the reference voltage. A 10K potentiometer is connected to the 5V and GND rails with the wiper, the middle contact, connected to AIN1/D7/PD7 which is the sampled voltage.
 
