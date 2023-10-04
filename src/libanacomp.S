@@ -187,5 +187,5 @@ acDisable:
     cbr r18,(1 << AIN0D)
     sbrs r18,(1 << AIN1D)   // Don't change if set.
     cbr r18,(1 << AIN1D)
-    sts ACSR,r18            // Enable GPIO for D6/D7.
+    sts DIDR1,r18            // Enable GPIO for D6/D7.
     ret
