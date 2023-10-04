@@ -1,0 +1,62 @@
+#######################################
+# Syntax Coloring Map
+#######################################
+
+#######################################
+# Classes (KEYWORD1)
+#######################################
+
+
+#######################################
+# Class Methods & Functions (KEYWORD2)
+#######################################
+acBegin	KEYWORD2
+acDisable	KEYWORD2
+
+
+######################################
+# Others Constants (LITERAL1)
+#######################################
+#-----------------------
+acTrigger_t	LITERAL1
+#-----------------------
+acTOGGLE	LITERAL1
+acRISING	LITERAL1
+acFALLING	LITERAL1
+acNONE	LITERAL1
+#
+#-----------------------
+acReferencePin_t
+#-----------------------
+acAIN0_D6	LITERAL1
+acAIN0_PD6	LITERAL1
+acAIN0_Internal	LITERAL1
+acAIN0_1v1	LITERAL1
+#
+#-----------------------
+acSamplePin_t
+#-----------------------
+acAIN1_A0	LITERAL1
+acAIN1_A1	LITERAL1
+acAIN1_A2	LITERAL1
+acAIN1_A3	LITERAL1
+acAIN1_A4	LITERAL1
+acAIN1_A5	LITERAL1
+acAIN1_D7	LITERAL1
+#
+acAIN1_PC0	LITERAL1
+acAIN1_PC1	LITERAL1
+acAIN1_PC2	LITERAL1
+acAIN1_PC3	LITERAL1
+acAIN1_PC4	LITERAL1
+acAIN1_PC5	LITERAL1
+acAIN1_PD7	LITERAL1
+#
+acAIN1_ADC0	LITERAL1
+acAIN1_ADC1	LITERAL1
+acAIN1_ADC2	LITERAL1
+acAIN1_ADC3	LITERAL1
+acAIN1_ADC4	LITERAL1
+acAIN1_ADC5	LITERAL1
+acAIN1_ADC6	LITERAL1
+acAIN1_ADC7	LITERAL1

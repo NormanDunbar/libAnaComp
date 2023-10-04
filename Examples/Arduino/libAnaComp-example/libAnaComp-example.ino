@@ -70,7 +70,7 @@ void setup() {
     pinMode(redLED, OUTPUT);
     pinMode(greenLED, OUTPUT);
     // Defaults: acAIN0_D6, acAIN1_D7, acNONE.
-    acBegin(acAIN0_D6, acAIN1_D7, acTOGGLE);
+    acBegin(acAIN0_D6, acAIN1_D7, acTOGGLE); 
 }
 
 //------------------------------------------------------------
