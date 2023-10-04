@@ -102,7 +102,7 @@ acBegin:
     //--------------------------------------------------------
     // Interrupt required?
     //--------------------------------------------------------
-    clr r18                 // Ready for further config.
+    clr r21                 // Use R21 for ACSR config.
                             // ACD = 0, AC will be enabled.
     sbrc r20,isrBit         // Interrupt on if R20.7 clear.
     rjmp acReference        // Skip if no interrupt.
@@ -110,8 +110,8 @@ acBegin:
     //--------------------------------------------------------
     // Interrupt is on.
     //--------------------------------------------------------
-    sbr r18,(1 << ACIE)     // Enable interrupt.
-    or r18,r20              // And set interrupt trigger.
+    sbr r21,(1 << ACIE)     // Enable interrupt.
+    or r21,r20              // And set interrupt trigger.
 
 acReference:
     //--------------------------------------------------------
@@ -119,11 +119,11 @@ acReference:
     //--------------------------------------------------------
     lds r19,DIDR1           // In case we use D6/D7 pins.
 
-    or r18,r24              // D6/1v1 for reference voltage.
-    sbrs r18,ACBG           // ACBG = 0, AIN0 = D6.
+    or r21,r24              // D6/1v1 for reference voltage.
+    sbrs r21,ACBG           // ACBG = 0, AIN0 = D6.
     sbr r19,(1 << AIN0D)    // Need to disable D6 GPIO.
 
-    out ACSR,r18            // Write config to ACSR.
+    //out ACSR,r21            // Write config to ACSR.
 
     //--------------------------------------------------------
     // Sample voltage.
@@ -148,7 +148,7 @@ acSetupD7:
     //--------------------------------------------------------
     sbr r19,(1 << AIN1D)    // Need to disable D7 GPIO. 
     sts DIDR1,r18           // Write config to DIDR1.
-    ret
+    rjmp acWriteACSR        // Finished configuration.
 
 acSetupA0_A7:
     //--------------------------------------------------------
@@ -159,7 +159,11 @@ acSetupA0_A7:
     lds r18,ADMUX           // Current ADMUX value.
     or r18,r22              // Select A0-A7 as AIN1.
     sts ADMUX,r18           // Write config to ADMUX.
+
+acWriteACSR:
+    out ACSR,r21            // Write config to ACSR & enable.
     ret
+
 
 //------------------------------------------------------------
 // Disable the analog comparator and enable GPIO on pins
